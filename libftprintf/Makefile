@@ -8,16 +8,13 @@ all: $(NAME)
 $(NAME): $(LIBFT_OFILES) $(PRINTF_OFILES)
 	@ar rc $(NAME) $(LIBFT_OFILES) $(PRINTF_OFILES)
 	@ranlib $(NAME)
-	@echo "\033[0;32mlib compiled.\033[0m "
+	@echo "\033[0;32mLib compiled.\033[0m "
 %.o: %.c
 	@gcc -o $@ -c $< $(FLAGS) $(INCLUDES)
 clean:
 	@rm -f $(LIBFT_OFILES) $(PRINTF_OFILES)
-	@echo "\033[0;32mCLEANED\033[0m "
 fclean: clean
 	@rm -f $(NAME)
 re:
 	@make fclean
 	@make
-run:
-	gcc main.c -L. -lftprintf && ./a.out | cat -e

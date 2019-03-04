@@ -12,11 +12,8 @@
 
 #include "../include/asm.h"
 
-int		main(int argc, char **argv)
-{
-	int	fd;
 
-	if (argc == 1)
-		ft_putstr("Usage: ./asm [file.s ...]\n");
+int		main(void)
+{
 	return (0);
 }
