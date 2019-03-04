@@ -14,5 +14,6 @@
 # define ASM_H
 
 #include "../../libftprintf/includes/ft_printf.h"
+#include "op.h"
 
 #endif

@@ -14,8 +14,13 @@
 
 int		main(int argc, char **argv)
 {
+	int	fd;
+
 	if (argc == 1)
 		ft_putstr("Usage: ./asm [file.s ...]\n");
-	
+	else
+	{
+
+	}
 	return (0);
 }
