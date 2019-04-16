@@ -1,6 +1,6 @@
 NAME =  asm
 FLAGS = -Wall -Werror -Wextra
-ASM_FILES = $(addprefix src/, main.c)
+ASM_FILES = ./src/main.c ./src/read_file.c ./src/op.c
 INCLUDES = -I ./includes
 LIBFTPRINTF_LIB = ./../libftprintf/libftprintf.a
 

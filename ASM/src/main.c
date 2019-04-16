@@ -18,9 +18,10 @@ void	print_error(int error)
 		ft_putstr("Usage: ./asm <sourcefile.s>\n"); 
 	else if (error == 2)
 		ft_putstr("Can not read source file \n");
+    else if (error == 3)
+        ft_putstr("Invalid parameter 0 type register for instruction live\t\t\t\t");
 	exit (0);
 }
-
 
 int		main(int argc, char **argv)
 {
@@ -39,7 +40,7 @@ int		main(int argc, char **argv)
 				argv[i][ft_strlen(argv[i]) - 1] != 's')
 			print_error(2);
 		}
+		read_file(argv);
 	}
-	
 	return (0);
 }
