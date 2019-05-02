@@ -1,0 +1,3 @@
+[submodule "corewar_vm"]
+	path = corewar_vm
+	url = https://github.com/unit-nsniezhk/corewar_vm.git
