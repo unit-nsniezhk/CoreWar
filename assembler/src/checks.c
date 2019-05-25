@@ -17,21 +17,27 @@ void	check_label(char *line, char **admit, t_all *info)
 {
 	int		i;
 	char	*dop;
+	char	*tmp;
 
+	tmp = ft_strtrim(line);
 	i = 0;
-	while (ft_isalnum(line[i]) || line[i] == '_')
+	while (ft_isalnum(tmp[i]) || tmp[i] == '_')
 		i++;
-	if (line[i] == LABEL_CHAR)
+	if (tmp[i] == LABEL_CHAR)
 	{
 		info->number_tokens += 1;
-		while (line[i] && !ft_isalnum(line[i]))
+		while (tmp[i] && !ft_isalnum(tmp[i]))
 			i++;
-		dop = ft_strsub(line, i, ft_strlen(line));
+		dop = ft_strsub(tmp, i, ft_strlen(tmp));
 		(*admit) = dop;
+		free(tmp);
 		free(dop);
 	}
 	else
-		(*admit) = line;
+	{
+		(*admit) = tmp;
+		free(tmp);
+	}
 }
 
 void	count_token_instr(char *admit, t_all *info)

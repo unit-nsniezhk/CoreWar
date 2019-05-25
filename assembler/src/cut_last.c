@@ -52,9 +52,6 @@ void			cut_last(char *rest, t_all *info, int n)
 		{
 			info->tokens[info->n].name = NULL;
 			info->tokens[info->n].value = check_digit(&tmp[1]);
-			if (info->tokens[info->n].value > REG_NUMBER ||\
-			info->tokens[info->n].value <= 0)
-				print_err(9, n, NULL);
 			info->tokens[info->n++].token = REGISTER;
 		}
 		else if (tmp[0] == DIRECT_CHAR || tmp[0] == LABEL_CHAR ||\

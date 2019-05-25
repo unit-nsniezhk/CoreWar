@@ -29,6 +29,7 @@ int		main(int argc, char **argv)
 				print_error(2);
 		}
 		read_file_asm(argv);
+		system("leaks Corewar");
 	}
 	return (0);
 }
